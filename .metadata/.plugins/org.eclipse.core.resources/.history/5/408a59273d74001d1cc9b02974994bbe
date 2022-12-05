@@ -1,0 +1,10 @@
+package demo.beans;
+
+public class HelloWorldKo {
+
+	public void sayHelllo(){
+		System.out.println("Hello");
+
+	}
+
+}
