@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	                    
+	  <bean id='test0' class='com.demo.beans.TestBean'/>
+	  <bean id='test1' class='com.demo.beans.TestBean'/>
+	  <bean id='test2' class='com.demo.beans.TestBean' lazy-init="true"/>
+
+	  <!-- scope : prototype - xml을 로딩할 때 객체가 생성되지 않는다. -->
+	<!-- getBean 메서드를 호출할 때 마다 새로운 객체를 생성해서 반환한다. -->
+	  <bean id='test3' class='com.demo.beans.TestBean' scope='prototype'/>
+
+
+	  
+	  
+
+
+
+
+	    
+</beans>
