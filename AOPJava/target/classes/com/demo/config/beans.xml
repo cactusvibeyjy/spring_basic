@@ -10,29 +10,20 @@
 	                    http://www.springframework.org/schema/aop
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+	<context:component-scan
+		base-package="com.demo.beans" />
+	<context:component-scan
+		base-package="com.demo.advisor" />
+
+	<!-- advisor 클래스에 설정되어 있는 Annoation을 분석하여 AOP 셋팅을 해라 -->
+	<aop:aspectj-autoproxy />
 
 
-
-
-
-
-	<bean id='xml1' class='com.demo.beans.TestBean' />
-
-
-
-	<bean id='advisor1' class='com.demo.advisor.AdvisorClass' />
-
-	<aop:config>
-		<aop:aspect ref='advisor1'>
-			<aop:pointcut id="point1"
-				expression="execution(* method1())" />
-
-			<aop:before method="beforeMethod" pointcut-ref="point1" />
-			<aop:after method="afterMethod" pointcut-ref="point1" />
-			<aop:around method="aroundMethod" pointcut-ref="point1"/>
-			
-		</aop:aspect>
-	</aop:config>
-	
+	<!-- <bean id='xml1' class='com.demo.beans.TestBean' /> <bean id='advisor1' 
+		class='com.demo.advisor.AdvisorClass' /> <aop:config> <aop:aspect ref='advisor1'> 
+		<aop:pointcut id="point1" expression="execution(* method1())" /> <aop:before 
+		method="beforeMethod" pointcut-ref="point1" /> <aop:after method="afterMethod" 
+		pointcut-ref="point1" /> <aop:around method="aroundMethod" pointcut-ref="point1"/> 
+		</aop:aspect> </aop:config> -->
 
 </beans>
